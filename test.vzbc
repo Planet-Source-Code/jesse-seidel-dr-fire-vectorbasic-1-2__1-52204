@@ -1,0 +1,9 @@
+Sub main 
+Dim i as Integer 
+msgbox "hello there!" 
+i = i + 1 
+If = True Then 
+Exit Sub 
+Else 
+End 
+End Sub 

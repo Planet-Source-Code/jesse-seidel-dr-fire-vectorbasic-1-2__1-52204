@@ -1,0 +1,48 @@
+Sub main               
+mform.show                
+mform.mkbtn mform.height - 1000, mform.width - 1200, 500, 1000, "Load Pic"           
+mform.mktxt mform.command1(1).top + 80, 0, 100, 5000, app.path & "\examples\example_pic.gif"       
+mform.caption = "Picture Viewer - Written in VectorBASIC " & app.major & "." & app.minor       
+a = mform.text1(1)       
+mform.text1(1).selstart = len(a)    
+mform.icon = loadpicture(app.path & "\examples\window.ico")    
+mform.mkimg 0, 0, 15, 15, False    
+mform.mkbtn 0, 0, mform.command1(1).height, mform.command1(1).width, "Clear"     
+mform.command1(1).top = 0
+mform.command1(1).left = 0 + command1(2).width
+End Sub               
+
+Sub command1_click          
+temp = mform.text1(1).text              
+mform.picture = loadpicture(temp)            
+End Sub           
+
+Sub command2_click  
+mform.picture = mform.image1(1).picture  
+End Sub  
+
+Sub MForm_Resize            
+mform.command1(1).top = mform.height - 1000            
+mform.command1(1).left = mform.width - 1150         
+mform.text1(1).top = mform.command1(1).top + 80         
+mform.text1(1).width = mform.width - mform.command1(1).width - 150 
+mform.command1(2).top = mform.command1(1).top - mform.text1(1).height - 150        
+End Sub         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
